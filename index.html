@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Krocket UK | Premium Video Production London, Rome, Worldwide</title>
+    <meta name="description" content="High-impact video production company delivering business growth through cinematic storytelling. Corporate conferences in London, music videos, and exclusive events in Rome, Asia, and the USA.">
+    <meta name="keywords" content="video production London, corporate video London, event videographer Rome, music video director UK, commercial video production, global video crew, corporate events London">
+    <meta name="robots" content="index, follow">
+    
+    <style>
+        :root {
+            --bg-color: #08090a;
+            --text-color: #ffffff;
+            --muted-color: #8a95a5;
+            --accent-color: #d4af37;
+            --card-bg: #121417;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: radial-gradient(circle at center, #13171c 0%, var(--bg-color) 70%);
+        }
+
+        header h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: 16px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            letter-spacing: 6px;
+            color: var(--muted-color);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 35px;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Global Operations Banner */
+        .geo-banner {
+            display: block;
+            background: var(--card-bg);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--muted-color);
+            text-decoration: none;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .geo-banner:hover {
+            background-color: #171a1e;
+            color: var(--text-color);
+        }
+        
+        .geo-banner span {
+            color: var(--text-color);
+            border-bottom: 1px dotted rgba(255,255,255,0.3);
+        }
+
+        /* Portfolio Sections */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        .portfolio-section {
+            margin-bottom: 120px;
+            scroll-margin-top: 40px;
+        }
+
+        .section-header {
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--muted-color);
+        }
+
+        /* Video Showcase Layout */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 40px;
+        }
+
+        .video-card {
+            background-color: var(--card-bg);
+            aspect-ratio: 16 / 9;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .video-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(8, 9, 10, 0.85);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .video-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .card-overlay h3 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .card-overlay p {
+            font-size: 0.85rem;
+            color: var(--muted-color);
+            letter-spacing: 1px;
+        }
+
+        .play-btn {
+            font-size: 1.8rem;
+            margin-top: 15px;
+        }
+
+        /* Contact Section & Footer */
+        footer {
+            padding: 120px 20px;
+            background-color: var(--card-bg);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-container {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        footer h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: var(--muted-color);
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            font-size: 1rem;
+        }
+
+        .email-display {
+            display: block;
+            font-size: 1.6rem;
+            color: var(--text-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .email-display:hover {
+            color: var(--accent-color);
+        }
+
+        /* Interactive Action Button Components */
+        .action-link-wrapper {
+            margin: 40px 0 30px 0;
+        }
+
+        .book-btn {
+            display: inline-block;
+            background: none;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            padding: 20px 50px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .book-btn:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 30px;
+        }
+
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--muted-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+
+        .instagram-link:hover {
+            color: var(--text-color);
+        }
+
+        .instagram-link span {
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.97);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-wrapper {
+            position: relative;
+            width: 85%;
+            max-width: 1100px;
+            aspect-ratio: 16 / 9;
+        }
+
+        .lightbox-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: -40px; right: 0;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.8rem; letter-spacing: 8px; }
+            .showcase-grid { grid-template-columns: 1fr; }
+            .email-display { font-size: 1.2rem; }
+            .book-btn { padding: 15px 30px; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Krocket UK</h1>
+        <p>Cinematic Video Production</p>
+        <a href="#works" class="cta-btn">View Portfolio</a>
+    </header>
+
+    <a href="#travel" class="geo-banner">
+        Available for Worldwide Commissions: <span>Europe &bull; Asia &bull; USA</span>
+    </a>
+
+    <main class="container" id="works">
+        
+        <section class="portfolio-section">
+            <div class="section-header">
+                <h2>Business &amp; Conferences</h2>
+                <p>Driving business growth through visual excellence. We build strategic visual assets designed to expand your audience and achieve core objectives, from high-profile corporate conferences in London to global brand campaigns.</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="video-card" data-yt-id="upAL9JvwPZo">
+                    <img src="https://img.youtube.com/vi/upAL9JvwPZo/maxresdefault.jpg" alt="Business Production">
+                    <div class="card-overlay">
+                        <h3>Corporate &amp; Tech Events</h3>
+                        <p>London, UK &bull; Full Production</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="section-header">
+                <h2>Music Videos</h2>
+                <p>Pure emotion. Visual poetry. We transform sound into raw, cinematic emotion, creating music videos that resonate deeply with your fanbase and amplify your artistic identity on a global scale.</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="video-card" data-yt-id="MSJdEp79Gnw">
+                    <img src="https://img.youtube.com/vi/MSJdEp79Gnw/maxresdefault.jpg" alt="Music Video Production">
+                    <div class="card-overlay">
+                        <h3>Artistic &amp; Music Videos</h3>
+                        <p>Cinematic Performance</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="section-header">
+                <h2>Exclusive Events &amp; Parties</h2>
+                <p>The spirit of the night, remembered for years. Exceptional events deserve to live forever. Whether capturing an exclusive party in Rome or an international summit, we preserve the electric energy and unscripted moments.</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="video-card" data-yt-id="QDUJJ5Il56g">
+                    <img src="https://img.youtube.com/vi/QDUJJ5Il56g/maxresdefault.jpg" alt="Event Production">
+                    <div class="card-overlay">
+                        <h3>Exclusive Parties &amp; Festivals</h3>
+                        <p>Rome, Italy &bull; Event Film</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="travel">
+            <div class="section-header">
+                <h2>Travel &amp; Vlogs</h2>
+                <p>Capturing the world through an authentic lens. From hidden European locations to vibrant international journeys, we blend cinematic aesthetics with engaging documentary storytelling for brands, creators, and researchers.</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="video-card" data-yt-id="hqMiM2HxjKE">
+                    <img src="https://img.youtube.com/vi/hqMiM2HxjKE/maxresdefault.jpg" alt="Travel and Vlog Production">
+                    <div class="card-overlay">
+                        <h3>Travel Documentaries &amp; Vlogs</h3>
+                        <p>Global Explorations &bull; Cinematic Stories</p>
+                        <div class="play-btn">▶</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <h2>Start a Project</h2>
+            <p>Ready to deploy across Europe, Asia, and the USA. Click below to launch your brief or copy our contact data:</p>
+            
+            <a href="mailto:editor_tv@mail.com" class="email-display">editor_tv@mail.com</a>
+            
+            <div class="action-link-wrapper">
+                <button type="button" class="book-btn" id="mailButton">
+                    Book a Production / Send Brief
+                </button>
+            </div>
+
+            <div id="fallbackBrief" style="display: none; background: var(--bg-color); border: 1px solid rgba(255,255,255,0.1); padding: 20px; text-align: left; margin-top: 20px;">
+                <p style="font-size: 0.85rem; color: var(--accent-color); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">
+                    No mail app detected? Copy the template below and send to editor_tv@mail.com:
+                </p>
+                <textarea readonly style="width: 100%; background: none; border: none; color: #fff; font-family: inherit; font-size: 0.95rem; resize: none; height: 130px; outline: none; display: block;" onclick="this.select();">
+To: editor_tv@mail.com
+Subject: Project Inquiry - Krocket UK
+
+Project Details:
+Estimated Location:
+Estimated Dates / Timeline:
+Estimated Budget:</textarea>
+                <p style="font-size: 0.75rem; color: var(--muted-color); margin-top: 5px;">(Click inside the box to select all text)</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://instagram.com/krocket.uk" target="_blank" rel="noopener" class="instagram-link">
+                    <span>&#9656;</span> Instagram @krocket.uk
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="playerLightbox">
+        <div class="lightbox-wrapper">
+            <span class="close-btn" id="closeLightboxBtn">Close</span>
+            <iframe id="embeddedPlayer" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.video-card');
+        const box = document.getElementById('playerLightbox');
+        const iframe = document.getElementById('embeddedPlayer');
+        const close = document.getElementById('closeLightboxBtn');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const id = card.getAttribute('data-yt-id');
+                if (id && id.trim().length === 11) {
+                    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+                    box.classList.add('active');
+                }
+            });
+        });
+
+        function haltPlayback() {
+            box.classList.remove('active');
+            iframe.src = '';
+        }
+
+        close.addEventListener('click', haltPlayback);
+        box.addEventListener('click', (e) => {
+            if (e.target === box) haltPlayback();
+        });
+
+        document.getElementById('mailButton').addEventListener('click', function() {
+            const targetMail = "editor_tv@mail.com";
+            const subject = encodeURIComponent("Project Inquiry - Krocket UK");
+            const body = encodeURIComponent("Hello Krocket UK,\n\nI would like to discuss a video production project.\n\nProject Details:\nEstimated Location:\nEstimated Dates / Timeline:\nEstimated Budget:");
+            
+            window.location.href = `mailto:${targetMail}?subject=${subject}&body=${body}`;
+            
+            setTimeout(function() {
+                document.getElementById('fallbackBrief').style.display = 'block';
+            }, 300);
+        });
+    </script>
+</body>
+</html>
